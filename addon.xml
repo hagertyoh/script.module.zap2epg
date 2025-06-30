@@ -30,7 +30,9 @@ Setup:
     <email></email>
     <source></source>
     <news>
-	  v2.0.4 - Update for Kodi 20+.  Updated EPG Genre linking and language detection.
+      v2.1.1a - Update for Gracenote Client
+      v2.1.1 - Update for Gracenote website
+      v2.0.4 - Update for Kodi 20+.  Updated EPG Genre linking and language detection.
       v2.0.3 - fix channel configuration error (2021-05-23)
       v2.0.2 - fix Tvheadend username and password option (2021-03-29)
       v2.0.1 - Kodi 19 dialog fix (2021-02-25)
