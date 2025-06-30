@@ -1,6 +1,17 @@
-v2.1.2a (2025-06-29)
- - update to gracenote and gracenote client agent
-
+v2.1.1a (2025-6-21) 
+ - Update for Gracenote Client
+v2.1.1 (2025-4-3)
+- Update for Gracenote website
+v2.0.4 
+ - Update for Kodi 20+.  Updated EPG Genre linking and language detection.
+v2.0.3 
+ - fix channel configuration error (2021-05-23)
+v2.0.2
+ - fix Tvheadend username and password option (2021-03-29)
+v2.0.1
+ - Kodi 19 dialog fix (2021-02-25)
+v2.0.0
+ - Python 3 update (2020-10-27)
 v1.3.1 (2020-10-29)
  - remove doctype error for TVH on OSMC
 
