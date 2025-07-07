@@ -1,3 +1,7 @@
+# Branch Reason
+to edit for zap2epg2 comparison
+
+
 # zap2epg - Kodi addon (script.module.zap2epg)
 
 zap2epg will generate an xmltv.xml file for USA/Canada TV lineups.*
