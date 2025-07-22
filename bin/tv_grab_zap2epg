@@ -17,15 +17,15 @@
 
 . /etc/profile
 
-ADDON_HOME="$HOME/.kodi/userdata/addon_data/script.module.zap2epg"
-ADDON_DIR="$HOME/.kodi/addons/script.module.zap2epg"
+ADDON_HOME="$HOME/.kodi/userdata/addon_data/script.module.zap2epg2"
+ADDON_DIR="$HOME/.kodi/addons/script.module.zap2epg2"
 XMLTV_OUTPUT="$ADDON_HOME/xmltv.xml"
 
 if [ $# -lt 1 ]
 then
   CD=`pwd`
   cd $ADDON_HOME
-  python $ADDON_DIR/zap2epg.py
+  python $ADDON_DIR/zap2epg2.py
   cat $XMLTV_OUTPUT
   cd $CD
   exit 0
@@ -34,7 +34,7 @@ fi
 while [ $# -gt 0 ]
 do case "$1" in
    -d | --description )
-     printf "tv_grab_zap2epg is a simple grabber for USA-Canada\n"
+     printf "tv_grab_zap2epg2 is a simple grabber for USA-Canada\n"
      ;;
 
    -v | --version )
