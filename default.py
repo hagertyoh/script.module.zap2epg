@@ -20,7 +20,7 @@ from tvh import tvh_connect, tvh_getData
 from tvlistings import create_opener, fetch_url
 from xbmcswift2 import Plugin 
 import re
-import zap2epg
+import zap2epg2
 import urllib.request, urllib.error, urllib.parse
 import json
 from collections import OrderedDict
@@ -240,8 +240,8 @@ def location():
 @plugin.route('/run')  #Menu item:  Run zap2epg and Update Guide Data
 def run():
     #import web_pdb; web_pdb.set_trace()
-    status = zap2epg.mainRun(userdata)
-    dialog.ok('zap2epg Finished!', 'zap2epg completed in ' + str(status[0]) + ' seconds.\n' + str(status[1]) + ' Stations and ' + str(status[2]) + ' Episodes written to xmltv.xml file.')
+    status = zap2epg2.mainRun(userdata)
+    dialog.ok('zap2epg2 Finished!', 'zap2epg2 completed in ' + str(status[0]) + ' seconds.\n' + str(status[1]) + ' Stations and ' + str(status[2]) + ' Episodes written to xmltv.xml file.')
 
 @plugin.route('/open_settings') #Menu item Configure Settings and Options
 def open_settings():
@@ -267,7 +267,7 @@ def index():
     items = []
     items.append(
     {
-        'label': 'Run zap2epg and Update Guide Data',
+        'label': 'Run zap2epg2 and Update Guide Data',
         'path': plugin.url_for('run'),
         'thumbnail':get_icon_path('run'),
     })
@@ -293,7 +293,7 @@ def index():
 
 
 if __name__ == '__main__':
-    log = os.path.join(userdata, 'zap2epg.log')
+    log = os.path.join(userdata, 'zap2epg2.log')
     createLogger(log)
     logger.info("We have connected to the logging program!")
     try:
