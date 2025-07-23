@@ -3,7 +3,7 @@
 *.log
 xmltv.xml
 settings.xml
-zap2epg.log
+zap2epg2.log
 *.json
 .venv
 __pycache__
