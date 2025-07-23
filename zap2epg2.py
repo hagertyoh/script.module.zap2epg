@@ -148,7 +148,7 @@ def mainRun(userdata):
         country = 'USA'
     else:
         country = 'CAN'
-    logger.info('Running zap2epg-2.2.1 for zipcode: %s and lineup: %s', zipcode, lineup)
+    logger.info('Running zap2epg2 for zipcode: %s and lineup: %s', zipcode, lineup)
     logger.info(f'langid installed: {useLangid}')
     pythonStartTime = time.time()
     cacheDir = os.path.join(userdata, 'cache')
@@ -261,7 +261,7 @@ def mainRun(userdata):
             except:
                 scheduleSort = OrderedDict(sorted(iter(schedule.items()), key=lambda x: x[1]['chfcc']))
             for station in scheduleSort:
-                fh.write(f'\t<channel id=\"{station}.zap2epg\">\n')
+                fh.write(f'\t<channel id=\"{station}.zap2epg2\">\n')
                 if 'chtvh' in scheduleSort[station] and scheduleSort[station]['chtvh'] is not None:
                     xchtvh = html.escape(scheduleSort[station]['chtvh'], quote=True)
                     fh.write(f'\t\t<display-name>{xchtvh}</display-name>\n')
@@ -794,7 +794,7 @@ def mainRun(userdata):
         xmltv()
         deleteOldShowCache(showList)
         timeRun = round((time.time() - pythonStartTime),2)
-        logger.info('zap2epg completed in %s seconds. ', timeRun)
+        logger.info('zap2epg2 completed in %s seconds. ', timeRun)
         logger.info('%s Stations and %s Episodes written to xmltv.xml file.', str(stationCount), str(episodeCount))
         counter = dict(sorted(Counter(countGenres()).items()))
         for cnt in counter:
@@ -805,8 +805,8 @@ def mainRun(userdata):
 
 if __name__ == '__main__':
     userdata = os.getcwd()
-    log = os.path.join(userdata, 'zap2epg.log')
+    log = os.path.join(userdata, 'zap2epg2.log')
     createLogger(log)
-    logger.info("zap2epg.py is started executing")
+    logger.info("zap2epg2.py is started executing")
     create_opener() #create the connection to the website for EPG data
     mainRun(userdata)
