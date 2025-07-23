@@ -18,7 +18,7 @@ import os
 import shutil
 
 #create a place holder so earlier function calls will still work before the logger is initialized.
-logger = logging.getLogger("zap2epg")
+logger = logging.getLogger("zap2epg2")
 
 def createLogger(log):
     global logger
@@ -34,7 +34,7 @@ def createLogger(log):
                 os.remove(old_file)
             shutil.move(log, old_file)
 
-        logger = logging.getLogger('zap2epg')
+        logger = logging.getLogger('zap2epg2')
         logger.setLevel(logging.DEBUG)
 
         # Create a handler that writes to Kodi's log
@@ -46,6 +46,6 @@ def createLogger(log):
         if not logger.hasHandlers():
             logger.addHandler(handler)
 
-        logger.info("Logging started for zap2epg")
+        logger.info("Logging started for zap2epg2")
 
         return logger
